@@ -10,3 +10,6 @@ RUN pip install --no-cache-dir \
 
 COPY ./lint.sh /lint.sh
 ENTRYPOINT ["/lint.sh"]
+
+COPY ./pretty.sh /pretty.sh
+WORKDIR /repo
