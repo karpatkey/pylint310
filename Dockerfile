@@ -8,5 +8,5 @@ RUN pip install --no-cache-dir \
     isort==5.12.0 \
     flake8-pyproject==1.2.3
 
-COPY ./entrypoint.sh /entrypoint.sh
-ENTRYPOINT /entrypoint.sh
+COPY ./lint.sh /lint.sh
+ENTRYPOINT ["/lint.sh"]
