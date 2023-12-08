@@ -7,3 +7,6 @@ RUN pip install --no-cache-dir \
     flake8==6.0.0 \
     isort==5.12.0 \
     flake8-pyproject==1.2.3
+
+COPY ./entrypoint.sh /entrypoint.sh
+ENTRYPOINT /entrypoint.sh
