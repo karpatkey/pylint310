@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Check black isort and flake8
-        uses: docker://ghcr.io/maurob/pylint310
+        uses: docker://ghcr.io/karpatkey/pylint310
         with:
           args: path1 path2 ...  # paths to check linting
 ```
@@ -33,9 +33,9 @@ jobs:
 
 Run the default linting check
 ```sh
-docker run --rm -v $PWD:/repo:ro ghcr.io/maurob/pylint310 path1 path2
+docker run --rm -v $PWD:/repo:ro ghcr.io/karpatkey/pylint310 path1 path2
 ```
 or apply code formating using your current user
 ```sh
-docker run --rm -v $PWD:/repo --user $(id -u):$(id -g) --entrypoint /pretty.sh ghcr.io/maurob/pylint310 path1 path2
+docker run --rm -v $PWD:/repo --user $(id -u):$(id -g) --entrypoint /pretty.sh ghcr.io/karpatkey/pylint310 path1 path2
 ```
